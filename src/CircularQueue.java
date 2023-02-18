@@ -47,4 +47,24 @@ public class CircularQueue {
             System.out.println("Successfully inserted " + value + " in the Queue");
         }
     }
+
+    public int deQUeue() {
+        if (isEmpty()) {
+            System.out.println("The circular Queue is empty");
+            return -1;
+        } else {
+            int result = arr[beginningOfQueue];
+            arr[beginningOfQueue] = 0;
+            if (beginningOfQueue == topOfQueue) {
+                beginningOfQueue = -1;
+                topOfQueue = -1;
+            } else if (beginningOfQueue + 1 == size) {
+                beginningOfQueue = 0;
+            } else {
+                beginningOfQueue++;
+            }
+            return result;
+        }
+
+    }
 }

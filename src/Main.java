@@ -5,6 +5,9 @@ public class Main {
         cq.enQueue(10);
         cq.enQueue(20);
         cq.enQueue(30);
-        cq.enQueue(40);
+        int result = cq.deQUeue();
+        System.out.println(result);
+        int result2 = cq.deQUeue();
+        System.out.println(result2);
     }
 }
