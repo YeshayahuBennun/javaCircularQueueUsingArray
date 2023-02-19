@@ -65,6 +65,19 @@ public class CircularQueue {
             }
             return result;
         }
+    }
 
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("The Circular Queue is empty");
+            return -1;
+        } else {
+            return arr[beginningOfQueue];
+        }
+    }
+
+    public void delete() {
+        arr = null;
+        System.out.println("The Queue is successfully deleted");
     }
 }
